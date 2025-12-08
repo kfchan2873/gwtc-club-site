@@ -6,6 +6,9 @@
   --color-text: #1e2a3b;
   --color-text-muted: #666a73;
   --color-border: #e2e5ec;
+  --color-header-bg: #dfebe5;  /* light green */
+  
+  
 
   --radius-card: 12px;
   --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.06);
@@ -56,6 +59,7 @@ a {
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--color-border);
+  
 }
 
 .header-inner {
@@ -64,6 +68,9 @@ a {
   justify-content: space-between;
   gap: 1.5rem;
   padding: 0.75rem 0;
+  background: var(--color-header-bg); /* light green now */
+
+
 }
 
 .logo {
@@ -227,13 +234,25 @@ a {
 
 
 .hero-image-placeholder {
+  align-self: center;
+  justify-self: center;
+  max-width: 420px;        /* horizontal size */
+  width: 100%;
+  aspect-ratio: 4 / 3;     /* keeps same shape for all images */
+  border-radius: 5px;
+  overflow: hidden;
+  background: #f4f5f7;
+}
+
+.hero-image-placeholder1 {
   border: 4px solid #ffffff; /* Club green */
   padding: 10px;            /* Space between border and image */
-  border-radius: 16px;      /* Rounded corners */
+  border-radius: 10px;      /* Rounded corners */
   background: #ffffff;      /* Ensures padding is white */
   overflow: hidden;         /* Keeps image corners clean */
   display: inline-block;    /* Prevents stretching */
 }
+
 
 .hero-image {
   display: block;

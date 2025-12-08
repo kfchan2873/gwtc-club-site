@@ -1,6 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 function Home() {
+  // 🔁 1. List of hero images (put these files in /public)
+  const heroImages = [
+    "tennis1.jpg",
+    "tennis2.jpg",
+    "tennis3.jpg",
+    "tennis4.jpg",
+    "tennis5.jpg",
+    "tennis6.jpg",
+    "tennis7.jpg",
+    "tennis8.jpg",
+    "tennis9.jpg",
+    "tennis10.jpg",
+  ];
+
+  // 🔁 2. State for which image is shown
+  const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
+
+  // 🔁 3. Change image every 4 seconds
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentHeroIndex((prev) => (prev + 1) % heroImages.length);
+    }, 4000);
+
+    return () => clearInterval(intervalId);
+  }, [heroImages.length]);
+
+  // ⬇️ 4. Your JSX stays here
   return (
     <div className="page">
       {/* Hero */}
@@ -9,11 +36,13 @@ function Home() {
           <div className="hero-copy">
             <p className="eyebrow">Welcome to</p>
             <h1>Glen Waverley Tennis Club</h1>
-            <p className="hero-subtitle">
-              <h2 className="hero-address"> 626 Waverley Road Glen Waverley, Vic 3150</h2>
-          
-              <p> Play. Learn. Compete. Belong.</p>
+
+            {/* fixed structure: no h2/p inside p */}
+            <p className="hero-address">
+              626 Waverley Road Glen Waverley, Vic 3150
             </p>
+            <p className="hero-subtitle">Play. Learn. Compete. Belong.</p>
+
             <div className="hero-actions">
               <a href="/membership" className="btn btn-primary">
                 Join Now
@@ -26,14 +55,15 @@ function Home() {
               </a>
             </div>
           </div>
+
+          {/* 🔁 Hero carousel replaces static tennis2.jpg */}
           <div className="hero-image-placeholder">
             <img
-              src="tennis2.jpg"
-              alt="Group of tennis players on court"
+              src={heroImages[currentHeroIndex]}
+              alt="Tennis club hero"
               className="hero-image"
             />
-</div>
-
+          </div>
         </div>
       </section>
 
@@ -95,15 +125,12 @@ function Home() {
               Learn more about us →
             </a>
           </div>
-          <div className="hero-image-placeholder">
-
-          <img
-    src="tennis1.jpg"
-    alt="Tennis courts surrounded by trees"
-    className="hero-image"
-  />
-
-
+          <div className="hero-image-placeholder1">
+            <img
+              src="oldTennis1.jpg"
+              alt="Tennis courts surrounded by trees"
+              className="hero-image"
+            />
           </div>
         </div>
       </section>
