@@ -173,6 +173,12 @@ a {
   color: var(--color-text);
   border-color: var(--color-border);
 }
+.btn-info {
+  background: transparent;
+  color: var(--color-text);
+  border-color: green;
+}
+
 
 /* Generic sections */
 

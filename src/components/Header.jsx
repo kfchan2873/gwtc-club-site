@@ -15,19 +15,18 @@ function Header() {
   <span className="logo-text">Glen Waverley Tennis Club</span>
 </div>
 
-        <nav className="main-nav">
-          <NavLink to="/" end>
-            Home
-          </NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/membership">Membership</NavLink>
-          <NavLink to="/book-court">Book a Court</NavLink>
-          <NavLink to="/coaching">Coaching</NavLink>
-          <NavLink to="/competitions-social">Competitions & Social</NavLink>
-          <NavLink to="/news-events">News & Events</NavLink>
-          <NavLink to="/gallery">Gallery</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
-        </nav>
+    <nav className="main-nav">
+      <NavLink to="/" end>Home</NavLink>
+      <NavLink to="/about">About</NavLink>
+      <NavLink to="/membership">Membership</NavLink>
+      <NavLink to="/book-court">Book a Court</NavLink>
+      <NavLink to="/coaching">Coaching</NavLink>
+      <NavLink to="/competitions-social">Competitions & Social</NavLink>
+      <NavLink to="/news-events">News & Events</NavLink>
+      <NavLink to="/gallery">Gallery</NavLink>
+      <NavLink to="/location">Location</NavLink> {/* 👈 new */}
+      <NavLink to="/contact">Contact</NavLink>
+    </nav>
 
         <div className="header-cta">
           <NavLink to="/membership" className="btn btn-primary">

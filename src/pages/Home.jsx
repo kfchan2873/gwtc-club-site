@@ -38,9 +38,10 @@ function Home() {
             <h1>Glen Waverley Tennis Club</h1>
 
             {/* fixed structure: no h2/p inside p */}
-            <p className="hero-address">
+            <h6 className="hero-address">
               626 Waverley Road Glen Waverley, Vic 3150
-            </p>
+            </h6>
+            <br />
             <p className="hero-subtitle">Play. Learn. Compete. Belong.</p>
 
             <div className="hero-actions">
@@ -53,7 +54,12 @@ function Home() {
               <a href="/coaching" className="btn btn-ghost">
                 Coaching Programs
               </a>
+                <a href="/location" className="btn btn-ghost">
+                    Location
+                  </a>
+
             </div>
+
           </div>
 
           {/* 🔁 Hero carousel replaces static tennis2.jpg */}
