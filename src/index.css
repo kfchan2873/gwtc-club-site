@@ -114,6 +114,9 @@ a {
   font-size: .9rem;
   font-weight: 600;
   background-color:var(--color-header-bg) ;
+  padding: 0.4rem 1rem;   /* ⬅️ top/bottom height + side spacing */
+
+  
 }
 
 .main-nav a {

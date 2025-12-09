@@ -51,11 +51,11 @@ function Home() {
               <a href="/book-court" className="btn btn-outline">
                 Book a Court
               </a>
-              <a href="/coaching" className="btn btn-ghost">
+              <a href="/coaching" className="btn btn-outline">
                 Coaching Programs
               </a>
-                <a href="/location" className="btn btn-ghost">
-                    Location
+                <a href="/location" className="btn btn-outline">
+                    Location Map
                   </a>
 
             </div>
