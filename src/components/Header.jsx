@@ -1,15 +1,19 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import clubLogo from "/gwtc-logo.png"
 
 function Header() {
   return (
     <header className="site-header">
       <div className="header-inner container">
-        <div className="logo">
-          {/* Simple text logo for now */}
-          <span className="logo-mark">GWTC</span>
-          <span className="logo-text">Glen Waverley Tennis Club</span>
-        </div>
+      <div className="logo">
+        <img
+          src={clubLogo}
+          alt="Glen Waverley Tennis Club logo"
+          className="logo-img"
+        />
+  <span className="logo-text">Glen Waverley Tennis Club</span>
+</div>
 
         <nav className="main-nav">
           <NavLink to="/" end>

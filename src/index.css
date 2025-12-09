@@ -1,12 +1,12 @@
 :root {
   --color-bg: #ffffff;
-  --color-bg-alt: #f7f8fa;
+  --color-bg-alt: #ffffff;
   --color-primary: #4e7d47;
-  --color-primary-dark: #3d6137;
-  --color-text: #1e2a3b;
-  --color-text-muted: #666a73;
-  --color-border: #e2e5ec;
-  --color-header-bg: #dfebe5;  /* light green */
+  --color-primary-dark: #c4d8c1;
+  --color-text: #050f1d;
+  --color-text-muted: #0c214b;
+  --color-border: #e4ece0;
+  --color-header-bg: #dcebd9;  /* light */
   
   
 
@@ -38,6 +38,9 @@ a {
   margin-inline: auto;
 }
 
+
+
+
 /* Layout */
 
 .app-root {
@@ -68,10 +71,16 @@ a {
   justify-content: space-between;
 
   gap: 1.5rem;
-  padding: 0.75rem 0.5rem;
-  background: var(--color-header-bg); /* light green now */
+  padding: 0.75rem 0.0rem;
+  /*background: var(--color-header-bg); /* light green now */
+*/
 
+}
 
+.logo-img {
+  height: 40px;        /* tweak size to taste: 32–48px works well */
+  width: auto;
+  display: block;
 }
 
 .logo {
@@ -102,7 +111,9 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  font-size: 0.9rem;
+  font-size: .9rem;
+  font-weight: 600;
+  background-color:var(--color-header-bg) ;
 }
 
 .main-nav a {
@@ -207,6 +218,10 @@ a {
   grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
   gap: 2.5rem;
   align-items: center;
+  background: #f8f9fa;        /* your blue */
+  border-radius: 24px;
+  padding: 0rem;
+
 }
 
 .eyebrow {
