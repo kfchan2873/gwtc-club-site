@@ -1,10 +1,12 @@
+
+// https://vite.dev/config/
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  base:"/gwtc-club-site",
+  base: mode === 'production' ? '/gwtc-club-site/' : '/',
+
   //add this
   server:{
     host:"0.0.0.0",
@@ -12,4 +14,5 @@ export default defineConfig({
     strictPort: true,
     cors: true
   }
-})
+}))
+  
