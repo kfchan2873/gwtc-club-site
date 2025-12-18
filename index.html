@@ -5,7 +5,22 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>gwtc-club-site</title>
-    <script type="module" crossorigin src="/gwtc-club-site/assets/index-BN3fsvw0.js"></script>
+
+    <script>
+      (function () {
+        // If we were redirected from 404.html, URL will be /?/<actual-route>
+        var path = window.location.search;
+        if (path.startsWith("?/")) {
+          var newPath = path.slice(1); // remove leading "?"
+          window.history.replaceState(null, "", newPath + window.location.hash);
+        }
+      })();
+    </script>
+    
+
+
+
+    <script type="module" crossorigin src="/gwtc-club-site/assets/index-Dbk5JotU.js"></script>
     <link rel="stylesheet" crossorigin href="/gwtc-club-site/assets/index-xBXzTVOs.css">
   </head>
   <body>
