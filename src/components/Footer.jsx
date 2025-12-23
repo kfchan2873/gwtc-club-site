@@ -1,3 +1,4 @@
+// src/components/Footer.jsx
 import React from "react";
 import { NavLink } from "react-router-dom";
 
@@ -21,9 +22,7 @@ function Footer() {
             <li>
               <NavLink to="/membership">Membership</NavLink>
             </li>
-            <li>
-              <NavLink to="/book-court">Book a Court</NavLink>
-            </li>
+
             <li>
               <NavLink to="/coaching">Coaching</NavLink>
             </li>

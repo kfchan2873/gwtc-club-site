@@ -34,13 +34,19 @@ function Home() {
       <section className="hero">
         <div className="container hero-inner">
           <div className="hero-copy">
-            <p className="eyebrow">Welcome to</p>
-            <h1>Glen Waverley Tennis Club</h1>
+
+            <div className="hero-eyebrow">
+              <img src="/gwtc-logo.png" alt="GWTC logo" className="hero-logo" />
+              <p className="eyebrow">Welcome to</p>
+            </div>
+
+
+            <h2>Glen Waverley Tennis Club</h2>
 
             {/* fixed structure: no h2/p inside p */}
-            <h6 className="hero-address">
+            <p className="hero-address">
               626 Waverley Road Glen Waverley, Vic 3150
-            </h6>
+            </p>
             <br />
             <p className="hero-subtitle">Play. Learn. Compete. Belong.</p>
 
@@ -48,9 +54,7 @@ function Home() {
               <a href="/membership" className="btn btn-primary">
                 Join Now
               </a>
-              <a href="/book-court" className="btn btn-outline">
-                Book a Court
-              </a>
+  
               <a href="/coaching" className="btn btn-outline">
                 Coaching Programs
               </a>

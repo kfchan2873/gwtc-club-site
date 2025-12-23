@@ -1,5 +1,6 @@
 
 // https://vite.dev/config/
+// gwtc-club-site/vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 

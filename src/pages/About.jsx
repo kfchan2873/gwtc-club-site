@@ -3,12 +3,7 @@ import React from "react";
 function About() {
   return (
     <div className="page container">
-      <header className="page-header">
-        <h1>About Glen Waverley Tennis Club</h1>
-        <p className="page-subtitle">
-          A welcoming community where tennis, friendships and fun thrive.
-        </p>
-      </header>
+
 
       <section className="section">
         <h2>Who We Are</h2>
