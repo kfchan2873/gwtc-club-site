@@ -36,7 +36,12 @@ function Home() {
           <div className="hero-copy">
 
             <div className="hero-eyebrow">
-              <img src="/gwtc-logo.png" alt="GWTC logo" className="hero-logo" />
+            <img
+              src={`${import.meta.env.BASE_URL}gwtc-logo.png`}
+              alt="GWTC logo"
+              className="hero-logo"
+            />
+
               <p className="eyebrow">Welcome to</p>
             </div>
 
