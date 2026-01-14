@@ -8,7 +8,9 @@ function CompetitionsSocial() {
         <p className="page-subtitle">
           Play for fun, fitness or competition — there’s something for everyone.
         </p>
+        <p> Watch This Space -- yet to populate</p>
       </header>
+      {/*
 
       <section className="section">
         <h2>Competitions</h2>
@@ -72,6 +74,7 @@ function CompetitionsSocial() {
           </tbody>
         </table>
       </section>
+      */}
     </div>
   );
 }

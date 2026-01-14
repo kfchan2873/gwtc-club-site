@@ -1,7 +1,7 @@
 // src/components/Header.jsx
 import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
-import clubLogo from "/gwtc-logo.png";
+//import clubLogo from "/gwtc-logo.png";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -82,32 +82,38 @@ function Header() {
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [menuOpen]);
 
+
+  const navItems = [
+    { to: "/", label: "Home", end: true },
+    { to: "/about", label: "About" },
+    { to: "/membership", label: "Membership" },
+    { to: "/competitions-social", label: "Competitions & Social" },
+    { to: "/news-events", label: "News & Events" },
+    { to: "/gallery", label: "Gallery" },
+    { to: "/location", label: "Location" },
+    { to: "/coaching", label: "Coaching" },
+    { to: "/contact", label: "Contact" },
+    { to: "/rules-policies", label: "Rules & Policies" },
+  ];
+
   return (
     <header className="site-header">
       <div className="header-inner container">
-    
-
+  
         {/* Desktop nav */}
         <nav className="main-nav desktop-nav" aria-label="Primary">
-          <NavLink to="/" end>
-            Home
-          </NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/membership">Membership</NavLink>
-         
-          <NavLink to="/coaching">Coaching</NavLink>
-          <NavLink to="/competitions-social">Competitions & Social</NavLink>
-          <NavLink to="/news-events">News & Events</NavLink>
-          <NavLink to="/gallery">Gallery</NavLink>
-          <NavLink to="/location">Location</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
-        </nav>
+  {navItems.map((item) => (
+    <NavLink
+      key={item.to}
+      to={item.to}
+      end={item.end}
+    >
+      {item.label}
+    </NavLink>
+  ))}
+</nav>
 
-        <div className="header-cta desktop-cta">
-          <NavLink to="/membership" className="btn btn-primary">
-            Join Now
-          </NavLink>
-        </div>
+
 
         {/* Mobile hamburger */}
         <button
@@ -145,44 +151,19 @@ function Header() {
         >
           Close
         </button>
-
         <nav className="mobile-nav" aria-label="Mobile">
-          <NavLink to="/" end onClick={closeMenu}>
-            Home
-          </NavLink>
-          <NavLink to="/about" onClick={closeMenu}>
-            About
-          </NavLink>
-          <NavLink to="/membership" onClick={closeMenu}>
-            Membership
-          </NavLink>
-          <NavLink to="/coaching" onClick={closeMenu}>
-            Coaching
-          </NavLink>
-          <NavLink to="/competitions-social" onClick={closeMenu}>
-            Competitions & Social
-          </NavLink>
-          <NavLink to="/news-events" onClick={closeMenu}>
-            News & Events
-          </NavLink>
-          <NavLink to="/gallery" onClick={closeMenu}>
-            Gallery
-          </NavLink>
-          <NavLink to="/location" onClick={closeMenu}>
-            Location
-          </NavLink>
-          <NavLink to="/contact" onClick={closeMenu}>
-            Contact
-          </NavLink>
+  {navItems.map((item) => (
+    <NavLink
+      key={item.to}
+      to={item.to}
+      end={item.end}
+      onClick={closeMenu}
+    >
+      {item.label}
+    </NavLink>
+  ))}
+</nav>
 
-          <NavLink
-            to="/membership"
-            className="btn btn-primary mobile-join"
-            onClick={closeMenu}
-          >
-            Join Now
-          </NavLink>
-        </nav>
       </div>
     </header>
   );

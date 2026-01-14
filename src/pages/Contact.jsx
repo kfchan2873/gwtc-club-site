@@ -26,6 +26,37 @@ function Contact() {
 
         <div>
           <h2>Send a Message</h2>
+
+          <form
+  className="contact-form"
+  action="https://formspree.io/f/xxxxxxx"
+  method="POST"
+>
+  <label>
+    Name
+    <input type="text" name="name" required />
+  </label>
+
+  <label>
+    Email
+    <input type="email" name="email" required />
+  </label>
+
+  <label>
+    Message
+    <textarea name="message" rows="4" required />
+  </label>
+
+  {/* Optional: helps you identify the source in the email */}
+  <input type="hidden" name="source" value="GWTC website contact form" />
+
+  <button type="submit" className="btn btn-primary">
+    Send Message
+  </button>
+</form>
+
+
+          {/*
           <form
             className="contact-form"
             onSubmit={(e) => {
@@ -49,6 +80,7 @@ function Contact() {
               Send Message
             </button>
           </form>
+          */}
         </div>
       </section>
     </div>

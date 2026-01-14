@@ -7,14 +7,14 @@ export const membershipPrices = [
       priceText: "$155 / year",
       notes: "Full membership for adults.",
       featured: false,
-      bullets: ["Court access", "Member rates", "Social tennis & competitions"],
+      bullets: ["Court access", "Social tennis & competitions"],
     },
     {
       id: "student",
       title: "Student",
       priceText: "$125 / year",
       notes: "Valid student ID required.",
-      bullets: ["Court access", "Member rates", "Social tennis & competitions"],
+      bullets: ["Court access", "Social tennis & competitions"],
     },
     {
       id: "junior",
@@ -28,7 +28,7 @@ export const membershipPrices = [
       title: "Family",
       priceText: "$340 / year",
       notes: "Best value for families.",
-      bullets: ["Family membership", "Court access", "Member rates"],
+      bullets: ["Family membership", "Court access"],
     },
   ];
   

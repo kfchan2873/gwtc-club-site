@@ -15,12 +15,8 @@ export default function Membership() {
           <h1>Membership</h1>
           <p className="page-subtitle">
             <h4> Join Glen Waverley Tennis Club — great tennis, friendly people, and a welcoming community</h4>
-            Membership classes and fees are listed below.<br /><br /> A Registration/Insurance fee is paid by our Club to Tennis Victoria and is included in the fees for each Club member. 
-
-Also included in Senior and Student membership fees is a $20 Maintenance Levy which is refundable if the member attends at least one working bee during the year. <br /><br />
-The membership year is from 1 July to 30 June of the following year.   Quarterly pro-rata fees are payable by members joining during the membership year.
+            Membership classes and fees are listed below.<br /><br /> A Registration/Insurance fee is paid by our Club to Tennis Victoria and is included in the fees for each Club member. <br></br> The membership year is from 1 July to 30 June of the following year.   Quarterly pro-rata fees are payable by members joining during the membership year.
 Senior (Incl. $20 refundable maintenance levy)
-          
           
           
           
@@ -61,12 +57,14 @@ Senior (Incl. $20 refundable maintenance levy)
                   ))}
                 </ul>
 
+                  {/*
                 <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
                   <a className="btn btn-primary" href={joinLinks.onlineForm} target="_blank" rel="noreferrer">
                     Apply / Join
                   </a>
-
                 </div>
+                */}
+
               </div>
             ))}
           </div>
@@ -89,7 +87,7 @@ Senior (Incl. $20 refundable maintenance levy)
                 Pay your membership fee (PayID/bank transfer options available).
               </li>
               <li>
-                Get started — come down for a hit, social tennis, coaching, or competitions.
+                Get started — come down for a social tennis hit.
               </li>
             </ol>
 
@@ -142,14 +140,14 @@ Senior (Incl. $20 refundable maintenance levy)
             <div className="value-card">
               <h4 style={{ marginTop: 0 }}>Can I try social tennis first?</h4>
               <p className="footer-text">
-                Yes — come along to a social session and meet members before joining.
+                Yes — come along to a social session and meet members before joining. We meet up on Sunday afternoon and Friday AM
               </p>
             </div>
 
             <div className="value-card">
               <h4 style={{ marginTop: 0 }}>How do court bookings work?</h4>
               <p className="footer-text">
-                Members get access to the booking system and member rates. See the Book a Court page.
+                Booking is not necessary. Roll up to play whenever there is a free court available
               </p>
             </div>
           </div>

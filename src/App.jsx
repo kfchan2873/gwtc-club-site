@@ -12,6 +12,7 @@ import NewsEvents from "./pages/NewsEvents.jsx";
 import Gallery from "./pages/Gallery.jsx";
 import Contact from "./pages/Contact.jsx";
 import Location from "./pages/Location.jsx";
+import RulesPolicies from "./pages/RulesPolicies.jsx";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/location" element={<Location />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/rules-policies" element={<RulesPolicies />} />
       </Routes>
     </Layout>
   );
