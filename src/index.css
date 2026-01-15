@@ -299,7 +299,7 @@ a {
 
 
 .hero-subtitle {
-  margin: 0 0 1.rem;
+  margin: 0 0 1rem;
   color: var(--color-text-muted);
 }
 
@@ -323,13 +323,15 @@ a {
   justify-self: stretch;    /* fill the column width */
   width: 100%;
   max-width: none;          /* ✅ remove the cap */
-  aspect-ratio: 4 / 3;
   border-radius: 5px;
   overflow: hidden;
   background: #f4f5f7;
 }
 
-
+.hero-image-placeholder,
+.hero-image-placeholder1 {
+  aspect-ratio: 4 / 3;
+}
 
 
 .hero-image {
@@ -337,7 +339,16 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+
+  opacity: 1;
+  transition: opacity 600ms ease;
 }
+
+.hero-image.is-fading {
+  opacity: 0;
+}
+
+
 .hero-address {
   margin-top: 0.1rem;    /* closer to the heading */
   margin-bottom: 0.5rem; /* small gap before subtitle */

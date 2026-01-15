@@ -15,17 +15,40 @@ function Home() {
     "tennis10.jpg",
   ];
 
-  // 🔁 2. State for which image is shown
+  // 🔁 2. State for which image is shown + fade control
   const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
+  const [isFading, setIsFading] = useState(false);
 
-  // 🔁 3. Change image every 4 seconds
+  // Timing (match FADE_MS to your CSS transition time)
+  const DISPLAY_MS = 10000; // how long each image stays visible
+  const FADE_MS = 600;     // fade-out duration (ms)
+
+  // 🔁 3. Fade-out -> swap -> fade-in
   useEffect(() => {
+    let timeoutId;
+    let lastchange =Date.now()
+  
     const intervalId = setInterval(() => {
-      setCurrentHeroIndex((prev) => (prev + 1) % heroImages.length);
-    }, 4000);
+      setIsFading(true);
+  
+      timeoutId = setTimeout(() => {
 
-    return () => clearInterval(intervalId);
+        const now = Date.now();
+        console.log(
+          "seconds since last image:", ((now-lastchange)/1000).toFixed(2))
+      
+
+        setCurrentHeroIndex((prev) => (prev + 1) % heroImages.length);
+        setIsFading(false);
+      }, FADE_MS);
+    }, DISPLAY_MS);
+  
+    return () => {
+      clearInterval(intervalId);
+      clearTimeout(timeoutId);
+    };
   }, [heroImages.length]);
+  
 
   // ⬇️ 4. Your JSX stays here
   return (
@@ -34,17 +57,15 @@ function Home() {
       <section className="hero">
         <div className="container hero-inner">
           <div className="hero-copy">
-
             <div className="hero-eyebrow">
-            <img
-              src={`${import.meta.env.BASE_URL}gwtc-logo.png`}
-              alt="GWTC logo"
-              className="hero-logo"
-            />
+              <img
+                src={`${import.meta.env.BASE_URL}gwtc-logo.png`}
+                alt="GWTC logo"
+                className="hero-logo"
+              />
 
               <p className="eyebrow">Welcome to</p>
             </div>
-
 
             <h2>Glen Waverley Tennis Club</h2>
 
@@ -59,24 +80,23 @@ function Home() {
               <a href="/membership" className="btn btn-primary">
                 Join Now
               </a>
-  
+
               <a href="/coaching" className="btn btn-outline">
                 Coaching Programs
               </a>
-                <a href="/location" className="btn btn-outline">
-                    Location Map
-                  </a>
 
+              <a href="/location" className="btn btn-outline">
+                Location Map
+              </a>
             </div>
-
           </div>
 
-          {/* 🔁 Hero carousel replaces static tennis2.jpg */}
+          {/* 🔁 Hero carousel with fade-out -> swap -> fade-in */}
           <div className="hero-image-placeholder">
             <img
-             src={`${import.meta.env.BASE_URL}${heroImages[currentHeroIndex]}`}
+              src={`${import.meta.env.BASE_URL}${heroImages[currentHeroIndex]}`}
               alt="Tennis club hero"
-              className="hero-image"
+              className={`hero-image ${isFading ? "is-fading" : ""}`}
             />
           </div>
         </div>
