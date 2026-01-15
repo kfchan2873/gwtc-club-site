@@ -41,8 +41,8 @@ export const membershipOptions = [
   
   // Contact + payment info
   export const contactDetails = {
-    email: "info@glenwaverleytennis.com.au",
-    phone: "04xx xxx xxx",
+    email: "gwtc.info626@gmail.com",
+    mobile: "+61400675103",
   
     // PayID (set these properly when ready)
     payId: "", // e.g. "treasurer@gwtc.com.au" or "04xx xxx xxx"

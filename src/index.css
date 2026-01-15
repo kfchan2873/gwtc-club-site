@@ -74,10 +74,10 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 1.5rem;
-  padding: 0.25rem 0.0rem;
-  background: var(--color-header-bg); /* light green now */
+  padding: 0.8rem 0.0rem;
+  background: var(--color-primary); /* light green now */
+
 
 }
 
@@ -114,10 +114,13 @@ a {
 .main-nav {
   display: flex;
   flex-wrap: wrap;
+  color:#fff;
   gap: 0.75rem;
   font-size: .9rem;
   font-weight: 600;
-  background-color:var(--color-header-bg) ;
+  /*background-color:var(--color-primary) ;*/
+  background: color-mix(in srgb, var(--color-primary) 35%, white);
+  background: transparent;
   padding: 0.4rem 1rem;   /* ⬅️ top/bottom height + side spacing */
 
   
@@ -127,10 +130,17 @@ a {
   padding: 0.25rem 0.5rem;
   border-radius: 999px;
   color: var(--color-text-muted);
+  color:#fff;
 }
 
 .main-nav a.active {
   background: var(--color-bg-alt);
+  color: var(--color-text);
+  color: #fff;
+}
+
+.main-nav a.active {
+  background: rgba(255,255,255,0.85);
   color: var(--color-text);
 }
 
@@ -145,7 +155,7 @@ a {
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  padding: 0.55rem 1.2rem;
+  padding: 0.45rem 1.0rem;
   font-weight: 600;
   font-size: 0.9rem;
   border: 1px solid transparent;
@@ -153,6 +163,12 @@ a {
   transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease,
     transform 0.08s ease;
 }
+
+.hero .btn {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.78rem;
+}
+
 
 .btn:hover {
   transform: translateY(-1px);
@@ -228,7 +244,7 @@ a {
 
 .hero-inner {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
   gap: 2.5rem;
   align-items: center;
   background: #f8f9fa;
@@ -293,18 +309,6 @@ a {
   gap: 0.75rem;
 }
 
-
-.hero-image-placeholder {
-  align-self: center;
-  justify-self: center;
-  max-width: 420px;        /* horizontal size */
-  width: 100%;
-  aspect-ratio: 4 / 3;     /* keeps same shape for all images */
-  border-radius: 5px;
-  overflow: hidden;
-  background: #f4f5f7;
-}
-
 .hero-image-placeholder1 {
   border: 4px solid #ffffff; /* Club green */
   padding: 10px;            /* Space between border and image */
@@ -313,6 +317,7 @@ a {
   overflow: hidden;         /* Keeps image corners clean */
   display: inline-block;    /* Prevents stretching */
 }
+
 .hero-image-placeholder {
   align-self: stretch;      /* lets it fill the column height nicely */
   justify-self: stretch;    /* fill the column width */
@@ -323,6 +328,8 @@ a {
   overflow: hidden;
   background: #f4f5f7;
 }
+
+
 
 
 .hero-image {
@@ -366,7 +373,7 @@ a {
 
 .split {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
   gap: 2rem;
   align-items: center;
 }

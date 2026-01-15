@@ -74,7 +74,7 @@ function Home() {
           {/* 🔁 Hero carousel replaces static tennis2.jpg */}
           <div className="hero-image-placeholder">
             <img
-              src={heroImages[currentHeroIndex]}
+             src={`${import.meta.env.BASE_URL}${heroImages[currentHeroIndex]}`}
               alt="Tennis club hero"
               className="hero-image"
             />

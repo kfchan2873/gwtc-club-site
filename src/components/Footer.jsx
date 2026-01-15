@@ -1,6 +1,7 @@
 // src/components/Footer.jsx
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { contactDetails } from "../data/membershipData.js";
 
 function Footer() {
   return (
@@ -22,7 +23,6 @@ function Footer() {
             <li>
               <NavLink to="/membership">Membership</NavLink>
             </li>
-
             <li>
               <NavLink to="/coaching">Coaching</NavLink>
             </li>
@@ -35,8 +35,11 @@ function Footer() {
         <div className="footer-col">
           <h4>Contact</h4>
           <p className="footer-text">
-            Email: info@glenwaverleytennis.com.au<br />
-            Phone: 04xx xxx xxx
+            Email:{" "}
+            <a href={`mailto:${contactDetails.email}`}>{contactDetails.email}</a>
+            <br />
+            Mobile:{" "}
+            <a href={`tel:${contactDetails.mobile}`}>{contactDetails.mobile}</a>
           </p>
         </div>
       </div>
