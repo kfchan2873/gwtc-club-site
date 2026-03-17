@@ -4,13 +4,13 @@ export const committeeMembers = [
   {
     name: "Clive Edmonds",
     role: "President",
-    photo: `${import.meta.env.BASE_URL}images/clive.jpg`
+    photo: `${import.meta.env.BASE_URL}images/clive.jpg`,
     bio: "",
   },
   {
     name: "Tony Meggs",
     role: "Vice President",  
-    photo: `${import.meta.env.BASE_URL}images/tony.jpg`
+    photo: `${import.meta.env.BASE_URL}images/tony.jpg`,
     bio: "",
   },
   {
