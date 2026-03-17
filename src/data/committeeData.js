@@ -4,33 +4,33 @@ export const committeeMembers = [
   {
     name: "Clive Edmonds",
     role: "President",
-    photo: "/images/clive.jpg",
+    photo: `${import.meta.env.BASE_URL}images/clive.jpg`
     bio: "",
   },
   {
     name: "Tony Meggs",
-    role: "Vice President",
-    photo: "/images/tony.jpg",
+    role: "Vice President",  
+    photo: `${import.meta.env.BASE_URL}images/tony.jpg`
     bio: "",
   },
   {
     name: "Ross Davies",
     role: "Treasurer",
-    photo: "/images/ross.jpg",
+    photo: `${import.meta.env.BASE_URL}images/ross.jpg`
     bio: "",
   },
 
  {
     name: "Brian Bruce",
     role: "Membership",
-    photo: "/images/brian.jpg",
+    photo: `${import.meta.env.BASE_URL}images/brian.jpg`
     bio: "",
   },
 
  {
     name: "Bob Gibbins",
     role: "Commitee ",
-    photo: "/images/bob.jpg",
+      photo: `${import.meta.env.BASE_URL}images/bob.jpg`
     bio: "",
   },
    {
@@ -42,39 +42,39 @@ export const committeeMembers = [
    {
     name: "Tim Chrisfield",
     role: "Commitee",
-    photo: "/images/tim.jpg",
+    photo: `${import.meta.env.BASE_URL}images/tim.jpg`
     bio: "",
   },
    {
     name: "Eileen Chew",
     role: "Commitee Member",
-    photo: "/images/eileen.jpg",
+    photo: `${import.meta.env.BASE_URL}images/eileen.jpg`
     bio: "",
   },
    {
     name: "kwai chan",
     role: "Commitee Member",
-    photo: "/images/kwai.jpg",
+     photo: `${import.meta.env.BASE_URL}images/kwai.jpg`
     bio: "",
   },
 
   {
     name: "Avatar",
     role: "Secretary",
-    photo: "/images/avatar.jpg",
+      photo: `${import.meta.env.BASE_URL}images/avatar.jpg`
     bio: "",
   },
 
    {
     name: "Bob Hasler",
     role: "coach",
-    photo: "/images/coach.jpg",
+    photo: `${import.meta.env.BASE_URL}images/coach.jpg`
     bio: "",
   },
  {
     name: "Jake Harvey",
     role: "coach",
-    photo: "/images/coach.jpg",
+      photo: `${import.meta.env.BASE_URL}images/coach.jpg`
     bio: "",
   }
 
