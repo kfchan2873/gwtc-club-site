@@ -16,7 +16,7 @@ export const committeeMembers = [
   {
     name: "Ross Davies",
     role: "Treasurer",
-    photo: `${import.meta.env.BASE_URL}images/ross.jpg`
+    photo: `${import.meta.env.BASE_URL}images/ross.jpg`,
     bio: "",
   },
 
