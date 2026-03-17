@@ -23,58 +23,58 @@ export const committeeMembers = [
  {
     name: "Brian Bruce",
     role: "Membership",
-    photo: `${import.meta.env.BASE_URL}images/brian.jpg`
+    photo: `${import.meta.env.BASE_URL}images/brian.jpg`,
     bio: "",
   },
 
  {
     name: "Bob Gibbins",
     role: "Commitee ",
-      photo: `${import.meta.env.BASE_URL}images/bob.jpg`
+      photo: `${import.meta.env.BASE_URL}images/bob.jpg`,
     bio: "",
   },
    {
     name: "Judy Dries",
     role: "Minute Secretary",
-    photo: "/images/judy.jpg",
+      photo: `${import.meta.env.BASE_URL}images/judy.jpg`,
     bio: "",
   },
    {
     name: "Tim Chrisfield",
     role: "Commitee",
-    photo: `${import.meta.env.BASE_URL}images/tim.jpg`
+    photo: `${import.meta.env.BASE_URL}images/tim.jpg`,
     bio: "",
   },
    {
     name: "Eileen Chew",
     role: "Commitee Member",
-    photo: `${import.meta.env.BASE_URL}images/eileen.jpg`
+    photo: `${import.meta.env.BASE_URL}images/eileen.jpg`,
     bio: "",
   },
    {
     name: "kwai chan",
     role: "Commitee Member",
-     photo: `${import.meta.env.BASE_URL}images/kwai.jpg`
+     photo: `${import.meta.env.BASE_URL}images/kwai.jpg`,
     bio: "",
   },
 
   {
     name: "Avatar",
     role: "Secretary",
-      photo: `${import.meta.env.BASE_URL}images/avatar.jpg`
+      photo: `${import.meta.env.BASE_URL}images/avatar.jpg`,
     bio: "",
   },
 
    {
     name: "Bob Hasler",
     role: "coach",
-    photo: `${import.meta.env.BASE_URL}images/coach.jpg`
+    photo: `${import.meta.env.BASE_URL}images/coach.jpg`,
     bio: "",
   },
  {
     name: "Jake Harvey",
     role: "coach",
-      photo: `${import.meta.env.BASE_URL}images/coach.jpg`
+      photo: `${import.meta.env.BASE_URL}images/coach.jpg`,
     bio: "",
   }
 
