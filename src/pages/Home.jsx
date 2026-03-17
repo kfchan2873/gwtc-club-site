@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import CommitteePreview from "../components/CommitteePreview";
 
 function Home() {
   // 🔁 1. List of hero images (put these files in /public)
@@ -11,8 +12,8 @@ function Home() {
     "tennis6.jpg",
     "tennis7.jpg",
     "tennis8.jpg",
-    "tennis9.jpg",
-    "tennis10.jpg",
+   
+    
   ];
 
   // 🔁 2. State for which image is shown + fade control
@@ -117,7 +118,7 @@ function Home() {
             </div>
 
             <div className="feature-card">
-              <div className="feature-icon">👟</div>
+              <div className="feature-icon">👟</div>High
               <h3>Coaching</h3>
               <p>
                 Junior and adult coaching programs led by qualified coaches.
@@ -145,6 +146,9 @@ function Home() {
         </div>
       </section>
 
+      {/* Committee Preview */}
+      <CommitteePreview />
+
       {/* About teaser */}
       <section className="section section-alt">
         <div className="container split">
@@ -162,7 +166,7 @@ function Home() {
           </div>
           <div className="hero-image-placeholder1">
             <img
-              src="oldTennis1.jpg"
+              src="clubhouse.jpg"
               alt="Tennis courts surrounded by trees"
               className="hero-image"
             />
